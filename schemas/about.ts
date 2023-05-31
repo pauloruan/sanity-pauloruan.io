@@ -27,6 +27,20 @@ export default defineType({
       ]
     }),
     defineField({
+      name: "contact",
+      title: "Contact",
+      type: "array",
+      description: "The contact of the page.",
+      of: [
+        {
+          title: "Block",
+          type: "block",
+          styles: [{ title: "Normal", value: "normal" }],
+          lists: []
+        }
+      ]
+    }),
+    defineField({
       name: "image",
       title: "Image",
       type: "image",
