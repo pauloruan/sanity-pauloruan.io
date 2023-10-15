@@ -18,30 +18,44 @@ export default defineType({
       type: "slug",
       description: "The slug of the technology.",
       options: {
-        source: "title",
+        source: "name",
         maxLength: 96
       }
     }),
     defineField({
-      name: "logo",
-      title: "Logo",
-      type: "image",
-      description: "The logo of the technology.",
-      options: {
-        hotspot: true
-      }
+      name: "url",
+      title: "URL",
+      type: "url",
+      description: "The URL of the technology."
+    }),
+    defineField({
+      name: "icon",
+      title: "Icon",
+      type: "string",
+      description: "Name of icon from React Icons library."
     }),
     defineField({
       name: "order",
       title: "Order",
       type: "number",
       description: "The order of the technology."
+    }),
+    defineField({
+      name: "recentlyUsed",
+      title: "Recently Used",
+      type: "boolean",
+      initialValue: false,
+      options: {
+        layout: "switch"
+      },
+      description: "Is this technology recently used?"
     })
   ],
   preview: {
     select: {
       title: "name",
-      media: "logo"
+      subtitle: "order"
+
     }
   }
 })
