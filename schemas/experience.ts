@@ -74,6 +74,13 @@ export default defineType({
       options: {
         layout: "switch"
       }
+    }),
+    // Order
+    defineField({
+      name: "order",
+      title: "Order",
+      type: "number",
+      description: "The order of the experience."
     })
   ],
   preview: {
