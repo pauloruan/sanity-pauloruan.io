@@ -27,6 +27,20 @@ export default defineType({
       ]
     }),
     defineField({
+      name: "work",
+      title: "Work",
+      type: "array",
+      description: "The section about the work.",
+      of: [
+        {
+          title: "Block",
+          type: "block",
+          styles: [{ title: "Normal", value: "normal" }],
+          lists: []
+        }
+      ]
+    }),
+    defineField({
       name: "contact",
       title: "Contact",
       type: "array",
