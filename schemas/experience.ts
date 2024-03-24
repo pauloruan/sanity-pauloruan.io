@@ -29,23 +29,31 @@ export default defineType({
       description: "The position of the experience."
     }),
     defineField({
-      name: "linkedinImageURL",
-      title: "LinkedIn Image URL",
+      name: "linkedInURL",
+      title: "LinkedIn URL",
       type: "url",
-      description: "The URL of LinkedIn company image."
+      description: "The URL of LinkedIn company."
     }),
     defineField({
       name: "description",
       title: "Description",
-      type: "text",
+      type: "array",
+      of: [
+        {
+          title: "Block",
+          type: "block",
+          styles: [{ title: "Normal", value: "normal" }],
+          lists: []
+        }
+      ],
       description: "The description of the experience."
     }),
     defineField({
-      name: "requiredSkills",
-      title: "Required Skills",
+      name: "stack",
+      title: "Stack",
       type: "array",
       of: [{ type: "reference", to: { type: "technology" } }],
-      description: "The required skills for the experience."
+      description: "The stack of the experience."
     }),
     defineField({
       name: "startDate",
@@ -74,13 +82,6 @@ export default defineType({
       options: {
         layout: "switch"
       }
-    }),
-    // Order
-    defineField({
-      name: "order",
-      title: "Order",
-      type: "number",
-      description: "The order of the experience."
     })
   ],
   preview: {
