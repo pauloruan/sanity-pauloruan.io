@@ -13,10 +13,10 @@ export default defineType({
       description: "The title of the post."
     }),
     defineField({
-      name: "subtitle",
-      title: "Subtitle",
+      name: "description",
+      title: "Description",
       type: "string",
-      description: "The subtitle of the post."
+      description: "The description of the post."
     }),
     defineField({
       name: "slug",
@@ -29,9 +29,9 @@ export default defineType({
       }
     }),
     defineField({
-      name: "date",
-      title: "Date",
-      type: "datetime",
+      name: "publishedAt",
+      title: "Published at",
+      type: "date",
       description: "The date of the post.",
       options: {
         dateFormat: "YYYY-MM-DD"
